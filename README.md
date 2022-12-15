@@ -1,2 +1,7 @@
 # Master-Angular
 Angular From Zero To Dragon : taking you through an adventure with Angular framework. The course includes alot of topics that helps you to work with Angular without previous knowledge with it.
+<br>
+<br>
+<br>
+
+![main-qimg-3d2a60f972904b5dd34a3f99a31dc0c2-lq](https://user-images.githubusercontent.com/43557035/207872097-f730899c-4247-401b-9744-ae372b2058ba.jpg)

@@ -32,3 +32,18 @@ Add the below changes in view test.component.html,
 <br>
 <input type="text" [value]="userName">
 <br>
+<br>
+3-Event binding :<br>
+Events are actions like mouse click, double click, hover or any keyboard and mouse actions. If a user interacts with an application and performs some actions, then event will be raised. It is denoted by either parenthesis () or on-. We have different ways to bind an event to DOM element. Let’s understand one by one in brief.<br>
+
+<h1>{{number}}</h1>
+<button (click)="inc()">Increment</button>
+<button (click)="dec()">Decreament</button>
+  inc()
+  {
+    this.number++;
+  }
+  dec()
+  {
+    this.number--;
+  }

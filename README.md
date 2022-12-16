@@ -73,3 +73,6 @@ For example,
 
 ```
  if you enter any text in the textbox, it will bind to the property.
+<br>
+<h2>- Directives </h2>
+Link :https://www.tutorialspoint.com/angular8/angular8_directives.htm

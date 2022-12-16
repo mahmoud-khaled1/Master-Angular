@@ -1,0 +1,75 @@
+<!-- Data Binding Interpolation -->
+<h3>Hello {{name}} </h3>
+
+<!-- Property Binding -->
+<input type="text" [value]="userName">
+<br>
+<img [src]="img" [style.display]="titleStyle">
+<br>
+<button (click)="show()">show</button>
+<button (click)="Hide()">Hide</button>
+<!-- Event Binding -->
+<h1>{{number}}</h1>
+<button (click)="inc()">Increment</button>
+<button (click)="dec()">Decreament</button>
+<!-- Two-way data binding -->
+ <!-- if we use two way binding we must import form module in app.module.ts first -->
+ <!-- here if we change value of number both we change input value and number  -->
+<input type="text" [(ngModel)]="number">
+<!-------------------------------------------------------------------------------------------------->
+<!-- Directives  -->
+<!-- 1- Structural directives (ngIf ,ngSwitch, ngFor) -->
+
+ <!-- don't show paragraph if showText variable is false  -->
+<p *ngIf="showText">Welcome Mahmoud</p>
+
+<p *ngIf="x===y"> show if x == y</p>
+
+<p>ngIfElse example!</p>
+<div *ngIf="isLogIn; else isLogOut">
+   Hello you are logged in
+</div>
+<ng-template #isLogOut>
+   You're logged out..
+</ng-template>
+
+
+<h3>ngFor directive</h3>
+<ul>
+   <li *ngFor="let l of list ;index as i">
+      {{l}}   "index --> "{{i}}
+   </li>
+</ul>
+
+
+<h3>ngSwitch directive</h3>
+<ul [ngSwitch]="logInName">
+   <li *ngSwitchCase="'user'">
+      <p>User is logged in..</p>
+   </li>
+   <li *ngSwitchCase="'admin'">
+      <p>admin is logged in</p>
+   </li>
+   <li *ngSwitchDefault>
+      <p>Please choose login name</p>
+   </li>
+</ul>
+
+<!-- 2- non Structural directives (ngStyle ,ngClass ) -->
+<p [ngClass]="'title'">Welcome non Structural directives ngClass </p>
+
+
+<p [ngStyle]="{'color':paraStyle}"> Welcome non Structural directives ngStyle</p>
+
+
+
+<!--------------------------------------------------------------------------------------------->
+<!-- Pipes  -->
+<!-- Pipes are referred as filters. It helps to transform data and manage data within interpolation,
+  denoted by {{ | }}. It accepts data, arrays, integers and strings as inputs which are separated by ‘|’ symbol.
+  This chapter explains about pipes in detail. -->
+
+
+
+<app-home></app-home>
+<app-about></app-about>

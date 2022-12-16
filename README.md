@@ -9,3 +9,12 @@ Angular From Zero To Dragon : taking you through an adventure with Angular frame
 <br>
  CLI Overview and Command Reference :
  https://angular.io/cli
+<br>
+<h2>- Data Binding Interpolation</h2>
+
+
+<br>![DataBinding](https://user-images.githubusercontent.com/43557035/208134239-39db2556-76f8-43d1-b6a5-5ba6acf8b016.JPG)
+
+1-String interpolation : <br>
+In general, String interpolation is the process of formatting or manipulating strings. In Angular, Interpolation is used to display data from component to view (DOM). It is denoted by the expression of {{ }} and also known as mustache syntax.
+<br>

@@ -24,21 +24,32 @@ Property binding is used to bind the data from property of a component to DOM el
 <br>
 Let’s understand with a simple example.<br>
 Add the below code in test.component.ts file.<br>
+```
 export class TestComponent { 
    userName:string = "Peter"; 
 }
+```
 <br>
 Add the below changes in view test.component.html,
 <br>
+
+```
 <input type="text" [value]="userName">
+
+```
 <br>
 <br>
 3-Event binding :<br>
 Events are actions like mouse click, double click, hover or any keyboard and mouse actions. If a user interacts with an application and performs some actions, then event will be raised. It is denoted by either parenthesis () or on-. We have different ways to bind an event to DOM element. Let’s understand one by one in brief.<br>
 
+```
+Add the below changes in view test.component.html,
+
 <h1>{{number}}</h1>
 <button (click)="inc()">Increment</button>
 <button (click)="dec()">Decreament</button>
+Add the below code in test.component.ts file.<br>
+
   inc()
   {
     this.number++;
@@ -47,3 +58,18 @@ Events are actions like mouse click, double click, hover or any keyboard and mou
   {
     this.number--;
   }
+  
+  ```
+  <br>
+<br>
+3-Two-way data binding :<br>
+Two-way data binding is a two-way interaction, data flows in both ways (from component to views and views to component). Simple example is ngModel. If you do any changes in your property (or model) then, it reflects in your view and vice versa. It is the combination of property and event binding.  <br>
+
+```
+For example,
+
+<input type="text" [(ngModel)]="userName" />
+<p>Two way binding! Hello {{ userName }}!</p>
+
+```
+ if you enter any text in the textbox, it will bind to the property.

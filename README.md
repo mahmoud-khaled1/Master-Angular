@@ -18,12 +18,12 @@ Angular From Zero To Dragon : taking you through an adventure with Angular frame
 1-String interpolation : <br>
 In general, String interpolation is the process of formatting or manipulating strings. In Angular, Interpolation is used to display data from component to view (DOM). It is denoted by the expression of {{ }} and also known as mustache syntax.
 <br>
+<br>
 2-Property Binding :<br>
 Property binding is used to bind the data from property of a component to DOM elements. It is denoted by [].
 <br>
 Let’s understand with a simple example.<br>
 Add the below code in test.component.ts file.<br>
-
 export class TestComponent { 
    userName:string = "Peter"; 
 }

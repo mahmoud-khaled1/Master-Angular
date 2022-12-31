@@ -76,3 +76,5 @@ For example,
 <br>
 <h2>- Directives </h2>
 Link :https://www.tutorialspoint.com/angular8/angular8_directives.htm
+
+https://dotnettutorials.net/lesson/how-computer-works-csharp/

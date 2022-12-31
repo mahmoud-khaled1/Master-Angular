@@ -1,3 +1,6 @@
+import { DetailsComponent } from './details/details.component';
+import { ViewComponent } from './view/view.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
@@ -12,7 +15,14 @@ const routes: Routes = [
   // Routing Parameters
     { path: 'about/:name/:id', component: AboutComponent },
   // routing with query params
-    { path: 'footer', component: FooterComponent }
+    { path: 'footer', component: FooterComponent },
+  //routing to doesn't component
+  {path:'contact',redirectTo:'about',pathMatch:'full'},
+  //childRoutes
+  {path:'about',children:[{path:'view',component:ViewComponent},{path:'details',component:DetailsComponent}]},
+  // routing for page not found
+  {path:'**',component:PagenotfoundComponent}
+
     
   ];
 

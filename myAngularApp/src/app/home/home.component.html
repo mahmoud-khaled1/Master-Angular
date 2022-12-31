@@ -1,3 +1,49 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 <p>home works!</p>
-<app-footer></app-footer>
+
+
+
+<app-footer></app-footer> -->
+
+<!-- Template Driven Forms -->
+<!--
+<form #f="ngForm" (ngSubmit)="add(f)">
+  <input type="text" name="firstName" placeholder="First name" #firstName="ngModel" ngModel required minlength="5">  ngModel to access filed of form in ts file
+  <div class="alert alert-danger" *ngIf="firstName.errors?.['required'] && firstName.touched">
+    this field is required !
+  </div>
+  <div class="alert alert-danger" *ngIf="firstName.errors?.['minlength'] && firstName.touched">
+   min length is 5 chars
+  </div>
+  <br>
+  <input type="text" name="lastName" placeholder="Last Name" ngModel required>
+  <br>
+  <input type="number" name="age" placeholder="Age" ngModel required>
+  <br>
+  <input type="radio" ngModel>
+  <br>
+  <button type="submit" [disabled]="f.invalid"> Add</button>
+</form>
+-->
+
+<!--Reactive Forms-->
+
+<form [formGroup]="myform"  (ngSubmit)="print()">
+  <input type="text" formControlName="fname" placeholder="fname" required >
+  <div class="alert alert-danger" *ngIf="myform.get('fname')?.touched &&myform.get('fname')?.hasError('required')"> this input is required</div>
+  <!-- if we use Forms Set and Get values -->
+  <div class="alert alert-danger" *ngIf="fname?.touched &&fname?.hasError('required')"> this input is required</div>
+  <br>
+  <input type="number" formControlName="Age" placeholder="Age" required>
+  <div class="alert alert-danger"> this input is required</div>
+  <br>
+  <!-- Reactive Forms with form array and dynamic -->
+  <div formArrayName="items">
+    <div *ngFor="let item of myform.controls.items['controls'];index as i"[formGroupName]="item">
+      <input type="text" formControlName="id">
+      <input type="text" formControlName="title" >
+    </div>
+  </div>
+  <button type="submit">Print</button>
+</form>
+
